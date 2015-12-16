@@ -5,6 +5,8 @@
     </declare-styleable>
 
     <declare-styleable name="MultiLineFlowLayout">
+        <attr name="itemHeight" format="dimension"/>
+        <attr name="minLines" format="integer"/>
         <attr name="itemMargin" format="dimension"/>
         <attr name="dividerColor" format="color"/>
         <attr name="dividerHeight" format="dimension"/>

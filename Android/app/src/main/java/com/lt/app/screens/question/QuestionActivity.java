@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.FrameLayout;
 
 import com.lt.app.R;
@@ -89,5 +90,9 @@ public class QuestionActivity extends AppCompatActivity {
         if(actionBar != null){
             actionBar.hide();
         }
+    }
+
+    public void onBackKeyPressed(View v){
+        onBackPressed();
     }
 }

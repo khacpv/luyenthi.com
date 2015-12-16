@@ -8,16 +8,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.ViewSwitcher;
-
 import com.lt.app.R;
-import com.lt.app.common.util.ResouroceImageGetter;
+import com.lt.app.common.view.textview.ResourceImageGetter;
 import com.lt.app.common.util.StringUtils;
 import com.lt.app.common.util.ToastUtils;
 import com.lt.app.common.view.BaseHeader;
@@ -41,7 +38,6 @@ public class Question01SingleChoice extends QuestionLayout implements View.OnCli
 
 
     public Question01SingleChoice(Context context) {
-
         super(context);
         init();
     }
@@ -56,8 +52,7 @@ public class Question01SingleChoice extends QuestionLayout implements View.OnCli
         init();
     }
 
-
-    void init() {
+    protected void init() {
         View v = LayoutInflater.from(getContext()).inflate(R.layout.question_layout_01_singlechoice, this, true);
         header = (BaseHeader) v.findViewById(R.id.header);
         tvQuestionTitle = (TextView) v.findViewById(R.id.tvQuestionTitle);
@@ -96,7 +91,7 @@ public class Question01SingleChoice extends QuestionLayout implements View.OnCli
 
         String html = (StringUtils.getStringFromResouce(getContext(), R.string.question_long));
 
-        tvQuestionContent.setText(Html.fromHtml(html, new ResouroceImageGetter(getContext()), null));
+        tvQuestionContent.setText(Html.fromHtml(html, new ResourceImageGetter(getContext()), null));
         tvQuestionContent.setMovementMethod(LinkMovementMethod.getInstance());
         scollviewQuestion= (ScrollView) v.findViewById(R.id.scollviewQuestion);
 

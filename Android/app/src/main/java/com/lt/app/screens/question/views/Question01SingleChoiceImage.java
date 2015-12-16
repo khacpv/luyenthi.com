@@ -21,4 +21,9 @@ public class Question01SingleChoiceImage extends QuestionLayout {
     public Question01SingleChoiceImage(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
+
+    @Override
+    protected void init() {
+
+    }
 }

@@ -1,4 +1,4 @@
-package com.lt.app.common.view.tag;
+package com.lt.app.common.view.textview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -43,8 +43,9 @@ public class TextViewTag extends LinearLayout {
         }
     }
 
-    public void setText(String text){
+    public TextViewTag setText(String text){
         tvTag.setText(text);
+        return this;
     }
 
     public String getText(){

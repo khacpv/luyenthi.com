@@ -21,4 +21,9 @@ public class Question05SortAnswer extends QuestionLayout {
     public Question05SortAnswer(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
+
+    @Override
+    protected void init() {
+
+    }
 }

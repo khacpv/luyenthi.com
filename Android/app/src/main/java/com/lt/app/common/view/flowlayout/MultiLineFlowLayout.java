@@ -18,6 +18,9 @@ import com.lt.app.common.util.DimenUtils;
  */
 @TargetApi(16)
 public class MultiLineFlowLayout extends FlowLayout {
+
+    private int minLines = 3;
+    private int itemHeight = 70;
     private int itemMargin = 20;
     private int dividerColor = Color.BLACK;
     private int dividerHeight = 2;
@@ -42,12 +45,15 @@ public class MultiLineFlowLayout extends FlowLayout {
 
     private void init(AttributeSet attrs){
         itemMargin = DimenUtils.dpToPx(getContext(), itemMargin);
+        itemHeight = DimenUtils.dpToPx(getContext(), itemHeight);
 
         if(attrs != null){
             TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.MultiLineFlowLayout, 0, 0);
             itemMargin = a.getDimensionPixelSize(R.styleable.MultiLineFlowLayout_itemMargin, itemMargin);
             dividerColor = a.getColor(R.styleable.MultiLineFlowLayout_dividerColor, dividerColor);
             dividerHeight = a.getDimensionPixelSize(R.styleable.MultiLineFlowLayout_dividerHeight, dividerHeight);
+            itemHeight = a.getDimensionPixelSize(R.styleable.MultiLineFlowLayout_itemHeight, itemHeight);
+            minLines = a.getInteger(R.styleable.MultiLineFlowLayout_minLines,minLines);
             a.recycle();
         }
 
@@ -55,8 +61,6 @@ public class MultiLineFlowLayout extends FlowLayout {
         mPaint = new Paint();
         mPaint.setStyle(Paint.Style.FILL);
         mPaint.setColor(dividerColor);
-
-
     }
 
     @Override
@@ -81,11 +85,10 @@ public class MultiLineFlowLayout extends FlowLayout {
     }
 
     public int getLineCount(){
-        return 3;
+        return Math.max(minLines,mLines.size());
     }
 
     public int getLineBounds(int index, Rect r){
-        int itemHeight = DimenUtils.dpToPx(getContext(),72);
         int baseLine = itemHeight*(index+1)- itemMargin;
         r.left = 0;
         r.right = getMeasuredWidth();
