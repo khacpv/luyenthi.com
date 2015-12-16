@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ViewSwitcher;
 
 import com.lt.app.R;
 import com.lt.app.common.util.ResouroceImageGetter;
@@ -36,6 +37,7 @@ public class Question01SingleChoice extends QuestionLayout implements View.OnCli
     public LinearLayout lyAnswer, lyAnswerA, lyAnswerB, lyAnswerC, lyAnswerD;
     public ImageView imvSlide;
     public ScrollView scollviewQuestion;
+    public ViewSwitcher viewSwitcher;
 
 
     public Question01SingleChoice(Context context) {
@@ -78,6 +80,20 @@ public class Question01SingleChoice extends QuestionLayout implements View.OnCli
         lyAnswerC .setOnClickListener(this);
         lyAnswerD .setOnClickListener(this);
 
+        viewSwitcher= (ViewSwitcher) v.findViewById(R.id.viewSwitcher);
+      /*  viewSwitcher.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ViewSwitcher switcher = (ViewSwitcher) v;
+
+                if (switcher.getDisplayedChild() == 0) {
+                    switcher.showNext();
+                } else {
+                    switcher.showPrevious();
+                }
+            }
+        });*/
+
         String html = (StringUtils.getStringFromResouce(getContext(), R.string.question_long));
 
         tvQuestionContent.setText(Html.fromHtml(html, new ResouroceImageGetter(getContext()), null));
@@ -95,13 +111,15 @@ public class Question01SingleChoice extends QuestionLayout implements View.OnCli
             @Override
             public void onPanelCollapsed(View panel) {
                 Log.e(TAG, "panel Collapse");
-                imvSlide.setImageResource(R.drawable.arrow_up);
+              // imvSlide.setImageResource(R.drawable.arrow_up);
+                viewSwitcher.showNext();
             }
 
             @Override
             public void onPanelExpanded(View panel) {
                 Log.e(TAG, "panel Expand");
-                imvSlide.setImageResource(R.drawable.arrow_down);
+             //   imvSlide.setImageResource(R.drawable.arrow_down);
+                viewSwitcher.showNext();
             }
 
             @Override
