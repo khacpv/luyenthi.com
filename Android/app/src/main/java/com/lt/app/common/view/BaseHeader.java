@@ -1,5 +1,6 @@
 package com.lt.app.common.view;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -21,7 +22,7 @@ import com.lt.app.R;
 /**
  * Created by eo_cuong on 12/16/15.
  */
-public class BaseHeader extends FrameLayout {
+public class BaseHeader extends FrameLayout{
 
 
     public ImageView imvHeader;
@@ -39,6 +40,7 @@ public class BaseHeader extends FrameLayout {
     public BaseHeader(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
+
     }
 
     private void init() {
