@@ -22,13 +22,18 @@ public class ResourceImageGetter implements Html.ImageGetter {
         int path=0;
         if(source.equals("icon_info/")){
             path=R.drawable.icon_info;
+            Drawable drawable = context.getResources().getDrawable(path);
+            drawable.setBounds(10, 10, drawable.getIntrinsicWidth()/3,drawable.getIntrinsicHeight()/3);
+            return drawable;
         }
-
-
-
+        if(source.equalsIgnoreCase("icon_fomular/")){
+            path = R.drawable.icon_fomular;
+            Drawable drawable = context.getResources().getDrawable(path);
+            drawable.setBounds(10, 10, drawable.getIntrinsicWidth(),drawable.getIntrinsicHeight());
+            return drawable;
+        }
         Drawable drawable = context.getResources().getDrawable(path);
-        drawable.setBounds(10, 10, drawable.getIntrinsicWidth()/3,
-                drawable.getIntrinsicHeight()/3);
+        drawable.setBounds(10, 10, drawable.getIntrinsicWidth()/3,drawable.getIntrinsicHeight()/3);
         return drawable;
     }
 }
