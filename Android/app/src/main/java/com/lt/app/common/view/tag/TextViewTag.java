@@ -43,8 +43,9 @@ public class TextViewTag extends LinearLayout {
         }
     }
 
-    public void setText(String text){
+    public TextViewTag setText(String text){
         tvTag.setText(text);
+        return this;
     }
 
     public String getText(){

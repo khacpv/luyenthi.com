@@ -58,40 +58,55 @@
                 android:layout_height="wrap_content"
                 app:dividerColor="#d2d2d2"
                 app:dividerHeight="1dp"
-                app:itemMargin="20dp"
-                android:minHeight="195dp">
-
+                app:itemHeight="@dimen/tag_height"
+                app:itemMargin="@dimen/tag_margin"
+                app:minLines="3"
+                android:minHeight="200dp">
+                <!-- should removeAllView() in real -->
                 <com.lt.app.common.view.tag.TextViewTag
-                    android:id="@+id/tagDummy01"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:visibility="invisible"
-                    app:text="verrry long text can not bound" />
+                    app:text="Example tag 1" />
 
                 <com.lt.app.common.view.tag.TextViewTag
-                    android:id="@+id/tagDummy02"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:visibility="invisible"
-                    app:text="verrry long text can not bound" />
+                    app:text="Example Tag 2" />
 
                 <com.lt.app.common.view.tag.TextViewTag
-                    android:id="@+id/tagDummy03"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:visibility="invisible"
-                    app:text="verrry long text can not bound" />
+                    app:text="Example Tag 3" />
             </com.lt.app.common.view.flowlayout.MultiLineFlowLayout>
 
             <com.lt.app.common.view.flowlayout.FlowLayout
                 android:id="@+id/flowTag"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
                 app:dividerColor="#0000">
                 <com.lt.app.common.view.tag.TextViewTag
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:text="verrry long text can not bound" />
+                    android:layout_marginRight="10dp"
+                    app:text="+ adj/adv" />
+
+                <com.lt.app.common.view.tag.TextViewTag
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    app:text="+ too" />
+
+                <com.lt.app.common.view.tag.TextViewTag
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:text="+ (for someone)" />
+
+                <com.lt.app.common.view.tag.TextViewTag
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    app:text="+ to do something" />
             </com.lt.app.common.view.flowlayout.FlowLayout>
         </LinearLayout>
     </ScrollView>
