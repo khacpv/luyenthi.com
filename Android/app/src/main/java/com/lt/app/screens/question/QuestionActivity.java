@@ -30,8 +30,8 @@ public class QuestionActivity extends AppCompatActivity {
     private FrameLayout container;
 
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
         hideActionBar();
 
@@ -39,7 +39,7 @@ public class QuestionActivity extends AppCompatActivity {
         container = (FrameLayout)findViewById(R.id.container);
 
         Bundle bundle = getIntent().getExtras();
-        if(bundle == null || bundle.containsKey(ACTION_DATA_TYPE)){
+        if(bundle == null || !bundle.containsKey(ACTION_DATA_TYPE)){
             finish();
         }
 
@@ -67,6 +67,8 @@ public class QuestionActivity extends AppCompatActivity {
             case "Question05SortAnswer":
                 questionLayout = new Question05SortAnswer(this);
                 break;
+            default:
+                throw  new RuntimeException("indicate a question type");
 
         }
         refresh();
