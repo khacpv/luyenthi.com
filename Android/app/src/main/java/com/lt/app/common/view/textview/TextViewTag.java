@@ -1,4 +1,4 @@
-package com.lt.app.common.view.tag;
+package com.lt.app.common.view.textview;
 
 import android.content.Context;
 import android.content.res.TypedArray;

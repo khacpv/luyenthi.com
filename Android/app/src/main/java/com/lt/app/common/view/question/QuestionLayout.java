@@ -7,7 +7,7 @@ import android.widget.FrameLayout;
 /**
  * Created by khacpham on 12/16/15.
  */
-public class QuestionLayout extends FrameLayout {
+public abstract class QuestionLayout extends FrameLayout {
     public QuestionLayout(Context context) {
         super(context);
     }
@@ -19,4 +19,6 @@ public class QuestionLayout extends FrameLayout {
     public QuestionLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
+
+    protected abstract void init();
 }

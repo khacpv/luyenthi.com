@@ -21,4 +21,9 @@ public class Question02MultiChoiceImage extends QuestionLayout {
     public Question02MultiChoiceImage(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
+
+    @Override
+    protected void init() {
+
+    }
 }

@@ -13,7 +13,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
+        android:layout_margin="@dimen/layout_padding_def"
         android:background="#FFF">
 
         <LinearLayout
@@ -63,17 +63,17 @@
                 app:minLines="3"
                 android:minHeight="200dp">
                 <!-- should removeAllView() in real -->
-                <com.lt.app.common.view.tag.TextViewTag
+                <com.lt.app.common.view.textview.TextViewTag
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:text="Example tag 1" />
 
-                <com.lt.app.common.view.tag.TextViewTag
+                <com.lt.app.common.view.textview.TextViewTag
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:text="Example Tag 2" />
 
-                <com.lt.app.common.view.tag.TextViewTag
+                <com.lt.app.common.view.textview.TextViewTag
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:text="Example Tag 3" />
@@ -85,24 +85,24 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 app:dividerColor="#0000">
-                <com.lt.app.common.view.tag.TextViewTag
+                <com.lt.app.common.view.textview.TextViewTag
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     app:text="+ adj/adv" />
 
-                <com.lt.app.common.view.tag.TextViewTag
+                <com.lt.app.common.view.textview.TextViewTag
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     app:text="+ too" />
 
-                <com.lt.app.common.view.tag.TextViewTag
+                <com.lt.app.common.view.textview.TextViewTag
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:text="+ (for someone)" />
 
-                <com.lt.app.common.view.tag.TextViewTag
+                <com.lt.app.common.view.textview.TextViewTag
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"

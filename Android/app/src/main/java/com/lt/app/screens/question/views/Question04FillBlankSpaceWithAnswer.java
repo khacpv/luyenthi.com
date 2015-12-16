@@ -3,7 +3,6 @@ package com.lt.app.screens.question.views;
 import android.animation.LayoutTransition;
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,15 +13,15 @@ import com.lt.app.common.util.DimenUtils;
 import com.lt.app.common.view.flowlayout.FlowLayout;
 import com.lt.app.common.view.flowlayout.MultiLineFlowLayout;
 import com.lt.app.common.view.question.QuestionLayout;
-import com.lt.app.common.view.tag.TextViewTag;
-
-import java.util.ArrayList;
+import com.lt.app.common.view.textview.TextViewTag;
 
 /**
  * Created by khacpham on 12/16/15.
  * Display question with fill answer into blank space. have answers to choice
  */
 public class Question04FillBlankSpaceWithAnswer extends QuestionLayout implements View.OnClickListener {
+    private final int rightMargin = 20; //dip
+    private final int noMargin = 0; //dip
 
     TextView tvTitle;
     TextView tvContent;
@@ -33,7 +32,6 @@ public class Question04FillBlankSpaceWithAnswer extends QuestionLayout implement
     TextViewTag tag02;
     TextViewTag tag03;
     TextViewTag tag04;
-
 
     public Question04FillBlankSpaceWithAnswer(Context context) {
         super(context);
@@ -50,7 +48,7 @@ public class Question04FillBlankSpaceWithAnswer extends QuestionLayout implement
         init();
     }
 
-    private void init(){
+    protected void init(){
         LayoutInflater.from(getContext()).inflate(R.layout.question_layout_04_fillblankspacewithanswer,this,true);
 
         tvTitle = (TextView)findViewById(R.id.tvTitle);
@@ -64,21 +62,23 @@ public class Question04FillBlankSpaceWithAnswer extends QuestionLayout implement
         tag03 = new TextViewTag(getContext());
         tag04 = new TextViewTag(getContext());
 
+        // tag should be real position in listData
         tag01.setText("+ adj/adv").setTag(0);
         tag02.setText("+ too").setTag(1);
         tag03.setText("+ (for someone)").setTag(2);
         tag04.setText("+ to do something").setTag(3);
 
-        flowAnswer.setLayoutTransition(new LayoutTransition());
-        flowTag.setLayoutTransition(new LayoutTransition());
-
         flowTag.removeAllViews();
         flowAnswer.removeAllViews();
 
-        addTagView(flowTag,tag01,-1,20);
-        addTagView(flowTag, tag02, -1, 20);
-        addTagView(flowTag, tag03, -1, 20);
-        addTagView(flowTag, tag04, -1, 20);
+        flowAnswer.setLayoutTransition(new LayoutTransition());
+        flowTag.setLayoutTransition(new LayoutTransition());
+
+        // add sample data
+        addTagView(flowTag, tag01, -1, rightMargin);
+        addTagView(flowTag, tag02, -1, rightMargin);
+        addTagView(flowTag, tag03, -1, rightMargin);
+        addTagView(flowTag, tag04, -1, rightMargin);
     }
 
     @Override
@@ -87,23 +87,33 @@ public class Question04FillBlankSpaceWithAnswer extends QuestionLayout implement
             return;
         }
         TextViewTag tvTag = (TextViewTag) v;
+
         if(((ViewGroup)v.getParent()).getId() == flowTag.getId()) {
+            // if the tag is in flowTag
             flowTag.removeView(tvTag);
             TextViewTag newTag = new TextViewTag(getContext());
             newTag.setText(tvTag.getText()).setTag(tvTag.getTag());
-            addTagView(flowAnswer, newTag, -1, 0);
+            addTagView(flowAnswer, newTag, -1, noMargin);
         }else{
+            // if the tag is in flowAnswer
             flowAnswer.removeView(tvTag);
             TextViewTag newTag = new TextViewTag(getContext());
             newTag.setText(tvTag.getText()).setTag(tvTag.getTag());
-            addTagView(flowTag, newTag, (int)tvTag.getTag(), 20);
+            addTagView(flowTag, newTag, (int)tvTag.getTag(), rightMargin);
         }
     }
 
+    /**
+     * append a tag into a FlowLayout
+     * @param index the index should be append into layout
+     * @param marginRight unit in dip
+     * */
     private void addTagView(FlowLayout layout,TextViewTag tag,int index,int marginRight){
         if(index<0) {
+            // append to end
             layout.addView(tag);
         }else{
+            // append to index
             layout.addView(tag,Math.min(index,layout.getChildCount()));
         }
         tag.setOnClickListener(this);

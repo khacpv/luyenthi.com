@@ -1,4 +1,4 @@
-package com.lt.app.common.util;
+package com.lt.app.common.view.textview;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -10,10 +10,10 @@ import com.lt.app.R;
 /**
  * Created by eo_cuong on 12/16/15.
  */
-public class ResouroceImageGetter implements Html.ImageGetter {
+public class ResourceImageGetter implements Html.ImageGetter {
     private final Context context;
 
-    public ResouroceImageGetter(Context context) {
+    public ResourceImageGetter(Context context) {
         this.context = context;
     }
 

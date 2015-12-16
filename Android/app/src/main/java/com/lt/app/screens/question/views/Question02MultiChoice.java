@@ -21,4 +21,9 @@ public class Question02MultiChoice extends QuestionLayout {
     public Question02MultiChoice(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
+
+    @Override
+    protected void init() {
+
+    }
 }

@@ -8,6 +8,15 @@
     <string name="question.title">
         Read the following passage and mark the letter A, B, C, or D on your answer sheet to indicate the correct answer to each of the questions.
     </string>
+    <string name="question.03.content">
+        <![CDATA[
+            Suddenly, the canoe <lt_highlight>slopes</lt_highlight> carved <lt_answer>.....</lt_answer> and everyone fell into the cold water.<br>
+            The weather in Sydney is rather <lt_answer>.....</lt_answer> in July.<br>
+            Would you mind <lt_answer>.....</lt_answer> out the cigarette? The flowers <lt_answer>.....</lt_answer> in blue paper over there are so beautiful.<br>
+            Please promise to drop by our house when you are in <lt_answer>.....</lt_answer><br>
+            Mount Rushmore is famous for having the heads of 4 American presidents <lt_answer>.....</lt_answer> into the rock
+        ]]>
+    </string>
     <string name="question.long">
         <![CDATA[
             <p>In most discussions of cultural diversity, attention has focused on visible, explicit aspects of culture, such language, dress, food, religion, music, and social rituals.
