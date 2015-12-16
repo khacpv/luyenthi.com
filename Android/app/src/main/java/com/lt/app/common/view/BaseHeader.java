@@ -60,6 +60,6 @@ public class BaseHeader extends FrameLayout {
         params.height = (int) (width / ratio);
         imvHeader.setLayoutParams(params);
 
-
+        imvHeader.setImageResource(R.drawable.header);
     }
 }

@@ -18,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".screens.question.QuestionActivity"
+        <activity
+            android:name=".screens.question.QuestionActivity"
             android:theme="@style/AppTheme.Question">
             <intent-filter>
                 <action android:name="com.lt.app.screen.question" />

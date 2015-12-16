@@ -46,25 +46,25 @@ public class MainActivity extends AppCompatActivity {
         String questionType = "";
         switch (button.getId()){
             case R.id.btnSingleChoice:
-                questionType = Question01SingleChoice.class.getName();
+                questionType = Question01SingleChoice.class.getSimpleName();
                 break;
             case R.id.btnSingleChoiceWithImage:
-                questionType = Question01SingleChoiceImage.class.getName();
+                questionType = Question01SingleChoiceImage.class.getSimpleName();
                 break;
             case R.id.btnMultiChoice:
-                questionType = Question02MultiChoice.class.getName();
+                questionType = Question02MultiChoice.class.getSimpleName();
                 break;
             case R.id.btnMultiChoiceImage:
-                questionType = Question02MultiChoiceImage.class.getName();
+                questionType = Question02MultiChoiceImage.class.getSimpleName();
                 break;
             case R.id.btnFillBlankSpace:
-                questionType = Question03FillBlankSpace.class.getName();
+                questionType = Question03FillBlankSpace.class.getSimpleName();
                 break;
             case R.id.btnFillBlankSpaceWithAnswer:
-                questionType = Question04FillBlankSpaceWithAnswer.class.getName();
+                questionType = Question04FillBlankSpaceWithAnswer.class.getSimpleName();
                 break;
             case R.id.btnSortAnswer:
-                questionType = Question05SortAnswer.class.getName();
+                questionType = Question05SortAnswer.class.getSimpleName();
                 break;
             default:
                 throw new RuntimeException("button don't click any question");
