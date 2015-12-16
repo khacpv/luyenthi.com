@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextViewTag">
+        <attr name="text" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="MultiLineFlowLayout">
+        <attr name="itemMargin" format="dimension"/>
+        <attr name="dividerColor" format="color"/>
+        <attr name="dividerHeight" format="dimension"/>
+    </declare-styleable>
+</resources>

@@ -1,9 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#e3e3e3"
     android:orientation="vertical">
+
     <com.lt.app.common.view.BaseHeader
         android:layout_width="match_parent"
-        android:layout_height="54dp"/>
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="#FFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/question.04.title"
+                android:textAllCaps="true"
+                android:textColor="#565f62"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp"
+                android:background="#d3d3d3" />
+
+            <TextView
+                android:id="@+id/tvContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:text="@string/question.04.content"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25sp" />
+
+            <include
+                layout="@layout/base_layout_share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.lt.app.common.view.flowlayout.MultiLineFlowLayout
+                android:id="@+id/flowAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dividerColor="#d2d2d2"
+                app:dividerHeight="1dp"
+                app:itemMargin="20dp"
+                android:minHeight="195dp">
+
+                <com.lt.app.common.view.tag.TextViewTag
+                    android:id="@+id/tagDummy01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    app:text="verrry long text can not bound" />
+
+                <com.lt.app.common.view.tag.TextViewTag
+                    android:id="@+id/tagDummy02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    app:text="verrry long text can not bound" />
+
+                <com.lt.app.common.view.tag.TextViewTag
+                    android:id="@+id/tagDummy03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    app:text="verrry long text can not bound" />
+            </com.lt.app.common.view.flowlayout.MultiLineFlowLayout>
+
+            <com.lt.app.common.view.flowlayout.FlowLayout
+                android:id="@+id/flowTag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dividerColor="#0000">
+                <com.lt.app.common.view.tag.TextViewTag
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:text="verrry long text can not bound" />
+            </com.lt.app.common.view.flowlayout.FlowLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
 </LinearLayout>

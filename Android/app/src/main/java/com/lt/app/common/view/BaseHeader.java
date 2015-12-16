@@ -3,6 +3,8 @@ package com.lt.app.common.view;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.media.Image;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
@@ -38,8 +40,6 @@ public class BaseHeader extends FrameLayout {
         super(context, attrs, defStyleAttr);
         init();
     }
-
-
 
     private void init() {
         View v = LayoutInflater.from(getContext()).inflate(R.layout.base_header, this, true);

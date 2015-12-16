@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+    <ImageButton
+        android:id="@+id/btnLike"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_like"
+        android:background="#0000"/>
+    <ImageButton
+        android:id="@+id/btnComment"
+        android:layout_toRightOf="@id/btnLike"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_comment"
+        android:background="#0000"/>
+    <ImageButton
+        android:id="@+id/btnShare"
+        android:layout_toRightOf="@id/btnComment"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_share"
+        android:background="#0000"/>
+    <ImageButton
+        android:id="@+id/btnMenu"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_menu"
+        android:background="#0000"/>
+</RelativeLayout>
