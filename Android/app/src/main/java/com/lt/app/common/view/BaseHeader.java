@@ -22,7 +22,7 @@ import com.lt.app.R;
 public class BaseHeader extends FrameLayout {
 
 
-    ImageView imvHeader;
+    public ImageView imvHeader;
 
     public BaseHeader(Context context) {
         super(context);
@@ -38,6 +38,8 @@ public class BaseHeader extends FrameLayout {
         super(context, attrs, defStyleAttr);
         init();
     }
+
+
 
     private void init() {
         View v = LayoutInflater.from(getContext()).inflate(R.layout.base_header, this, true);
