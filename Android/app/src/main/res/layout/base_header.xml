@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#000"
-        android:src="@drawable/header1" android:scaleType="fitStart"></ImageView>
+        android:scaleType="fitStart"
+        android:src="@drawable/header1"/>
 
 </RelativeLayout>
