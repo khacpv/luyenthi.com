@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- day la sample view cho Material Design -->
+<?xml version="1.0" encoding="utf-8"?><!-- day la sample view cho Material Design -->
 <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,10 +8,74 @@
     tools:context="com.lt.app.MainActivity"
     tools:showIn="@layout/base_activity_main">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:text="@string/large_text" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnSingleChoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:onClick="openQuestionActivity"
+            android:text="Question 1.1: Single Choice"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/btnSingleChoiceWithImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:onClick="openQuestionActivity"
+            android:text="Question 1.1: SingleChoiceWithImage"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/btnMultiChoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:onClick="openQuestionActivity"
+            android:text="Question 2.1: MultiChoice"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/btnMultiChoiceImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:onClick="openQuestionActivity"
+            android:text="Question 2.2: MultiChoiceImage"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/btnFillBlankSpace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:onClick="openQuestionActivity"
+            android:text="Question 3: FillBlankSpace"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/btnFillBlankSpaceWithAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:onClick="openQuestionActivity"
+            android:text="Question 4: FillBlankSpaceWithAnswer"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/btnSortAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:onClick="openQuestionActivity"
+            android:text="Question 5: SortAnswers"
+            android:textColor="@color/colorPrimary" />
+    </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>

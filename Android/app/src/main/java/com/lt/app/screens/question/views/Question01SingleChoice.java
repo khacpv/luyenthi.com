@@ -11,6 +11,8 @@ import com.lt.app.common.view.question.QuestionLayout;
  * Display question with single choice. With image or not
  */
 public class Question01SingleChoice extends QuestionLayout {
+    public static final String TAG = Question01SingleChoice.class.getName();
+
     public Question01SingleChoice(Context context) {
         super(context);
     }
