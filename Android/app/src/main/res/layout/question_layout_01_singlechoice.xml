@@ -79,14 +79,33 @@
             android:background="@color/colorAccent"
             android:orientation="vertical"
             android:padding="5dp">
+            
+            <ViewSwitcher
+                android:id="@+id/viewSwitcher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inAnimation="@anim/fade_in"
+                android:outAnimation="@anim/fade_out">
+                <ImageView
+                    android:id="@+id/imvSlide"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/arrow_up" />
+                <ImageView
+                    android:id="@+id/imvSlide1"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/arrow_down" />
+            </ViewSwitcher>
 
-            <ImageView
+          <!--  <ImageView
                 android:id="@+id/imvSlide"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/arrow_up" />
+                android:src="@drawable/arrow_up" />-->
 
             <TextView
                 android:id="@+id/tvQuestion"
