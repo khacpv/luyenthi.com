@@ -21,7 +21,7 @@
             android:orientation="vertical"
             android:padding="@dimen/layout_padding_def">
 
-            <TextView
+            <com.lt.app.common.view.textview.RichTextView
                 android:id="@+id/tvQuestionContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
