@@ -30,6 +30,7 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="18sp" />
             <com.lt.app.common.view.flowlayout.FlowLayout
+                android:id="@+id/flowAnswer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp">
@@ -45,6 +46,7 @@
                     android:layout_marginRight="5dp"
                     android:background="@drawable/xml_tag_border"/>
                 <TextView
+                    android:id="@+id/tvAnswer02"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
@@ -55,6 +57,7 @@
                     android:layout_marginRight="5dp"
                     android:background="@drawable/xml_tag_border_selected"/>
                 <TextView
+                    android:id="@+id/tvAnswer03"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
@@ -65,6 +68,7 @@
                     android:layout_marginRight="5dp"
                     android:background="@drawable/xml_tag_border_selected"/>
                 <TextView
+                    android:id="@+id/tvAnswer04"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
@@ -75,6 +79,7 @@
                     android:layout_marginRight="5dp"
                     android:background="@drawable/xml_tag_border"/>
                 <TextView
+                    android:id="@+id/tvAnswer05"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
@@ -85,6 +90,7 @@
                     android:layout_marginRight="5dp"
                     android:background="@drawable/xml_tag_border"/>
                 <TextView
+                    android:id="@+id/tvAnswer06"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
@@ -95,6 +101,7 @@
                     android:layout_marginRight="5dp"
                     android:background="@drawable/xml_tag_border"/>
                 <TextView
+                    android:id="@+id/tvAnswer07"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
@@ -105,6 +112,7 @@
                     android:layout_marginRight="5dp"
                     android:background="@drawable/xml_tag_border"/>
                 <TextView
+                    android:id="@+id/tvAnswer08"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"

@@ -32,6 +32,7 @@ public class ResourceImageGetter implements Html.ImageGetter {
             drawable.setBounds(10, 10, drawable.getIntrinsicWidth(),drawable.getIntrinsicHeight());
             return drawable;
         }
+        path=R.drawable.icon_info;
         Drawable drawable = context.getResources().getDrawable(path);
         drawable.setBounds(10, 10, drawable.getIntrinsicWidth()/3,drawable.getIntrinsicHeight()/3);
         return drawable;

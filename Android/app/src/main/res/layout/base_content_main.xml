@@ -29,6 +29,7 @@
             android:layout_height="wrap_content"
             android:gravity="left|center_vertical"
             android:onClick="openQuestionActivity"
+            android:visibility="gone"
             android:text="Question 1.1: SingleChoiceWithImage"
             android:textColor="@color/colorPrimary" />
 
@@ -38,6 +39,7 @@
             android:layout_height="wrap_content"
             android:gravity="left|center_vertical"
             android:onClick="openQuestionActivity"
+            android:visibility="gone"
             android:text="Question 2.1: MultiChoice"
             android:textColor="@color/colorPrimary" />
 
@@ -47,6 +49,7 @@
             android:layout_height="wrap_content"
             android:gravity="left|center_vertical"
             android:onClick="openQuestionActivity"
+            android:visibility="gone"
             android:text="Question 2.2: MultiChoiceImage"
             android:textColor="@color/colorPrimary" />
 

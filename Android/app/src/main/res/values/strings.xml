@@ -10,20 +10,31 @@
     </string>
     <string name="question.03.content">
         <![CDATA[
-            Suddenly, the canoe <lt_highlight>slopes</lt_highlight> carved <lt_answer>.....</lt_answer> and everyone fell into the cold water.<br>
-            The weather in Sydney is rather <lt_answer>.....</lt_answer> in July.<br>
-            Would you mind <lt_answer>.....</lt_answer> out the cigarette? The flowers <lt_answer>.....</lt_answer> in blue paper over there are so beautiful.<br>
+            Suddenly, the canoe <lt_highlight>slopes</lt_highlight> carved <lt_clickable data="answer:01">.....</lt_clickable> and everyone fell into the cold water.<br>
+            The weather in Sydney is rather <lt_clickable data="answer:02">.....</lt_clickable> in July.<br>
+            Would you mind <lt_clickable data="answer:03">.....</lt_clickable> out the cigarette? The flowers <lt_clickable data="answer:04">.....</lt_clickable> in blue paper over there are so beautiful.<br>
             <img src="icon_fomular"/>
-            Please promise to drop by our house when you are in <lt_answer>.....</lt_answer><br>
-            Mount Rushmore is famous for having the heads of 4 American presidents <lt_answer>.....</lt_answer> into the rock
+            Please promise to drop by our house when you are in <lt_clickable data="answer:05">.....</lt_clickable><br>
+            Mount Rushmore is famous for having the heads of 4 American presidents <lt_clickable data="answer:06">.....</lt_clickable> into the rock
         ]]>
     </string>
     <string name="question.long">
         <![CDATA[
-            <p>In most discussions of cultural diversity, attention has focused on visible, explicit aspects of culture, such language, dress, food, religion, music, and social rituals.
-            Although they are important, these visible expressions of culture, which are tought <b>deliberately</b><img src="icon_info"/> and learned consciously, are only <b>the tip of the iceberg</b><img src="icon_info"/>or culture. Much of culture is taught and learned implicitly, or outside awareness. Thus, neither cultural insiders nor cultural outsiders are aware that certain "invisible" aspects of their culture exist.</p>
+            In most discussions of cultural diversity, attention has focused on visible, explicit aspects of culture, such language, dress, food, religion, music, and social rituals.
+            Although they are important, these visible expressions of culture, which are tought <lt_clickable data="tag:carefully_weighed_or_considered;_studied"><b>deliberately</b><img src="icon_info"/></lt_clickable> and learned consciously,
+            are only <lt_clickable data="tag:in_the_house_of_the_moon"><b>the tip of the iceberg</b><img src="icon_info"/></lt_clickable> or culture. Much of culture is taught and learned implicitly, or outside awareness.
+            Thus, neither cultural insiders nor cultural outsiders are aware that certain "invisible" aspects of their culture exist.</p>
 
             <p>Invisible elements of culture are important to us. For example, how long we can be late before being impolite, what topics we should avoid in a computer how e show.</p>
+        ]]>
+    </string>
+    <string name="question.short">
+        <![CDATA[
+            <p>clickable icon: <lt_clickable data="icon"><img src="icon_info"/></lt_clickable> </p>
+            <p>text clickable: <lt_clickable data="text">deliberately</lt_clickable> </p>
+            <p>text & icon clickable: <lt_clickable data="text_and_icon"><b>deliberately</b><img src="icon_info"/></lt_clickable> </p>
+            <p>fomular clickable: <lt_clickable data="fomular"><img src="icon_fomular"/></lt_clickable> </p>
+            <p>highlight: <lt_clickable data="highlight"><lt_highlight>highlight me</lt_highlight><img src="icon_info"/></lt_clickable> </p>
         ]]>
     </string>
     <string name="answer.suggest">

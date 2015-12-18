@@ -10,48 +10,63 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:onClick="onBackKeyPressed"/>
+        android:onClick="onBackKeyPressed" />
 
-    <ScrollView
+    <!--<ScrollView-->
+
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_below="@+id/header"-->
+    <!--android:scrollbars="none"-->
+    <!--android:layout_marginBottom="200dp"-->
+    <!--android:background="@color/white"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:padding="10dp">-->
+
+    <LinearLayout
         android:id="@+id/scollviewQuestion"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/header"
-        android:scrollbars="none"
         android:layout_marginBottom="200dp"
-        android:background="@color/white"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:padding="10dp">
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:scrollbars="none">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/tvQuestionTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:text="@string/question.title"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/tvQuestionTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/question.title"
-                android:textSize="15sp"
-                android:textColor="@color/colorPrimary" />
+        <com.lt.app.common.view.textview.RichTextView
+            android:id="@+id/tvQuestionContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="100"
+            android:scrollbars="vertical"
+            android:text="@string/question.long"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
 
-            <TextView
-                android:id="@+id/tvQuestionContent"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:textSize="14sp"
-                android:text="@string/question.long"
-                android:textColor="@color/black" />
-        </LinearLayout>
-
-    </ScrollView>
+    <!--</ScrollView>-->
 
 
-    <com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:spl="http://schemas.android.com/apk/res-auto"
         android:id="@+id/sliding_layout"
         android:layout_width="match_parent"
         android:layout_height="400dp"
@@ -60,17 +75,17 @@
         android:layout_marginRight="10dp"
         android:background="@color/white_tran"
         android:gravity="bottom"
-        sothree:umanoPanelHeight="200dp"
-        sothree:umanoShadowHeight="2dp">
+        spl:umanoPanelHeight="200dp"
+        spl:umanoShadowHeight="2dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white_tran"
             android:gravity="center"
-            android:text="Main Content"
             android:textSize="16sp"
             android:visibility="gone" />
+        
 
         <LinearLayout
             android:id="@+id/lyAnswer"
@@ -79,19 +94,21 @@
             android:background="@color/colorAccent"
             android:orientation="vertical"
             android:padding="5dp">
-            
+
             <ViewSwitcher
                 android:id="@+id/viewSwitcher"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inAnimation="@anim/fade_in"
                 android:outAnimation="@anim/fade_out">
+
                 <ImageView
                     android:id="@+id/imvSlide"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/arrow_up" />
+
                 <ImageView
                     android:id="@+id/imvSlide1"
                     android:layout_width="50dp"
@@ -99,13 +116,6 @@
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/arrow_down" />
             </ViewSwitcher>
-
-          <!--  <ImageView
-                android:id="@+id/imvSlide"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/arrow_up" />-->
 
             <TextView
                 android:id="@+id/tvQuestion"
@@ -120,8 +130,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
-                android:background="#919191"></View>
-
+                android:background="#919191" />
 
             <!--A-->
 
@@ -157,6 +166,8 @@
                 android:layout_marginTop="5dp"
                 android:background="#919191" />
 
+            <!--B-->
+
             <LinearLayout
                 android:id="@+id/lyAnswerB"
                 android:layout_width="match_parent"
@@ -188,6 +199,8 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="5dp"
                 android:background="#919191" />
+
+            <!--C-->
 
             <LinearLayout
                 android:id="@+id/lyAnswerC"
@@ -221,6 +234,8 @@
                 android:layout_marginTop="5dp"
                 android:background="#919191" />
 
+            <!--D-->
+
             <LinearLayout
                 android:id="@+id/lyAnswerD"
                 android:layout_width="match_parent"
@@ -251,5 +266,12 @@
 
     </com.sothree.slidinguppanel.SlidingUpPanelLayout>
 
+    <com.lt.app.common.view.notedlayout.NotedLayout
+        android:id="@+id/notedLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentBottom="true" />
 
 </RelativeLayout>
