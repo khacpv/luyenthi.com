@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#919191"
+    android:background="#e3e3e3"
     android:orientation="vertical">
 
     <com.lt.app.common.view.BaseHeader
@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/header"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="140dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
@@ -75,7 +75,7 @@
         android:layout_marginRight="10dp"
         android:background="@color/white_tran"
         android:gravity="bottom"
-        spl:umanoPanelHeight="200dp"
+        spl:umanoPanelHeight="150dp"
         spl:umanoShadowHeight="2dp">
 
         <LinearLayout
@@ -265,11 +265,10 @@
 
 
     </com.sothree.slidinguppanel.SlidingUpPanelLayout>
-
     <com.lt.app.common.view.notedlayout.NotedLayout
         android:id="@+id/notedLayout"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_alignParentBottom="true" />

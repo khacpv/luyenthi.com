@@ -1,67 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorAccent">
-
-    <ImageView
-        android:id="@+id/imvIcon"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:src="@drawable/icon_info"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginLeft="15dp"/>
-
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_toRightOf="@id/imvIcon"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Deliberately"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_alignTop="@id/imvIcon"
-        android:layout_alignBaseline="@id/imvIcon"/>
-
-    <TextView
-        android:id="@+id/tvContent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="carefully weighed or considered; studied"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:layout_marginTop="5dp"
-        android:layout_below="@+id/imvIcon"
-        android:layout_toRightOf="@+id/imvIcon"
-        android:layout_toEndOf="@+id/imvIcon" />
-
-    <ImageView
-        android:id="@+id/imvDelete"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/icon_delete"
-        android:layout_alignParentLeft="true"
-        android:layout_margin="5dp"
-        android:layout_alignParentBottom="true"/>
-
-    <ImageView
-        android:id="@+id/imvShare"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/icon_share"
-        android:layout_margin="5dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"/>
-
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
     <LinearLayout
-        android:id="@+id/line"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#aaa"
-        android:orientation="vertical"
-        android:layout_above="@+id/imvDelete"
-        android:layout_marginTop="15dp"/>
-</RelativeLayout>
+        android:layout_height="3dp"
+        android:background="@drawable/xml_fadebar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:id="@+id/imvIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/icon_info" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/imvIcon"
+            android:layout_alignTop="@id/imvIcon"
+            android:layout_toRightOf="@id/imvIcon"
+            android:text="Deliberately"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imvIcon"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/imvIcon"
+            android:layout_toRightOf="@+id/imvIcon"
+            android:text="carefully weighed or considered; studied"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tvContent"
+            android:layout_marginTop="15dp"
+            android:background="#aaa"
+            android:orientation="vertical" />
+
+        <ImageView
+            android:id="@+id/imvDelete"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/line"
+            android:layout_margin="5dp"
+            android:src="@drawable/icon_delete" />
+
+        <ImageView
+            android:id="@+id/imvShare"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/line"
+            android:layout_margin="5dp"
+            android:src="@drawable/icon_share" />
+
+
+    </RelativeLayout>
+</LinearLayout>

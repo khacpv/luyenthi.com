@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:gravity="left|center_vertical"
             android:onClick="openQuestionActivity"
-            android:text="Question 1.1: Single Choice"
+            android:text="Question 1: Single Choice"
             android:textColor="@color/colorPrimary" />
 
         <Button
@@ -40,7 +40,7 @@
             android:gravity="left|center_vertical"
             android:onClick="openQuestionActivity"
             android:visibility="gone"
-            android:text="Question 2.1: MultiChoice"
+            android:text="Question 2: MultiChoice"
             android:textColor="@color/colorPrimary" />
 
         <Button
@@ -50,7 +50,7 @@
             android:gravity="left|center_vertical"
             android:onClick="openQuestionActivity"
             android:visibility="gone"
-            android:text="Question 2.2: MultiChoiceImage"
+            android:text="Question 2.1: MultiChoiceImage"
             android:textColor="@color/colorPrimary" />
 
         <Button
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:gravity="left|center_vertical"
             android:onClick="openQuestionActivity"
-            android:text="Question 3: FillBlankSpace"
+            android:text="Question 3: Fill Blank Space"
             android:textColor="@color/colorPrimary" />
 
         <Button
@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:gravity="left|center_vertical"
             android:onClick="openQuestionActivity"
-            android:text="Question 4: FillBlankSpaceWithAnswer"
+            android:text="Question 4: Fill Blank Space With Answer"
             android:textColor="@color/colorPrimary" />
 
         <Button
@@ -77,6 +77,7 @@
             android:layout_height="wrap_content"
             android:gravity="left|center_vertical"
             android:onClick="openQuestionActivity"
+            android:visibility="gone"
             android:text="Question 5: SortAnswers"
             android:textColor="@color/colorPrimary" />
     </LinearLayout>

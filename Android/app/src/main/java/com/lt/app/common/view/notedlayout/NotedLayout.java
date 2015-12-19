@@ -1,12 +1,14 @@
 package com.lt.app.common.view.notedlayout;
 
 import android.content.Context;
+import android.text.Html;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.lt.app.R;
+import com.lt.app.common.util.StringUtils;
 
 /**
  * Created by khacpham on 12/19/15.
@@ -38,7 +40,7 @@ public class NotedLayout extends FrameLayout {
     }
 
     public void setData(String title,String content){
-        tvTitle.setText(title);
+        tvTitle.setText(StringUtils.stripHtml(title));
         tvContent.setText(content);
     }
 }

@@ -129,22 +129,27 @@ public class Question01SingleChoice extends QuestionLayout implements View.OnCli
             }
         });
 
-        OnTouchListener listener = new OnTouchListener() {
+        sliding_layout.setOnTouchListener(new OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-//                scollviewQuestion.onTouchEvent(event);
-                sliding_layout.onTouchEvent(event);
                 tvQuestionContent.onTouchEvent(event);
-                if(notedLayout.getAlpha()>0) {
-                    notedLayout.animate().alpha(0f).translationY(3500).setDuration(200).start();
-                }
-                if(sliding_layout.getVisibility() == View.INVISIBLE) {
-                    sliding_layout.setVisibility(View.VISIBLE);
+
+                return false;
+            }
+        });
+
+        tvQuestionContent.setOnTouchListener(new OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_UP) {
+                    if (notedLayout.getAlpha() > 0) {
+                        sliding_layout.setVisibility(View.VISIBLE);
+                        notedLayout.animate().alpha(0f).translationY(3500).setDuration(200).start();
+                    }
                 }
                 return false;
             }
-        };
-        sliding_layout.setOnTouchListener(listener);
+        });
 
         notedLayout.animate().alpha(0f).translationY(3500).setDuration(0).start();
         notedLayout.setOnTouchListener(new OnTouchListener() {
@@ -167,7 +172,8 @@ public class Question01SingleChoice extends QuestionLayout implements View.OnCli
 
     @Override
     public void onClick(String element, Editable output, Integer start, HashMap<String, String> attributes) {
-        notedLayout.setData(element.substring(0,Math.min(element.length(),12)), attributes.get("data").replaceAll("_", " ").replaceAll("tag:", ""));
+        notedLayout.setData(element, attributes.get("data").replaceAll("_", " ").replaceAll("tag:", ""));
         notedLayout.animate().alpha(1f).translationY(0).setDuration(200).start();
+        sliding_layout.setVisibility(View.INVISIBLE);
     }
 }

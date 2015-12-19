@@ -21,6 +21,7 @@ import org.xml.sax.SAXNotSupportedException;
 import org.xml.sax.XMLReader;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -76,7 +77,7 @@ public class ResourceTagHandler implements Html.TagHandler {
             }else{
                 final Integer _clickableStart = clickableStart;
                 final HashMap<String,String> _attributes = new HashMap<>(attributes);
-                output.setSpan(new ClickableSpan() {
+                ClickableSpan clickableSpan = new ClickableSpan() {
                     @Override
                     public void onClick(View widget) {
                         if(listener != null){
@@ -90,7 +91,8 @@ public class ResourceTagHandler implements Html.TagHandler {
                             listener.onClick(content,output,_clickableStart,_attributes);
                         }
                     }
-                }, _clickableStart, output.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                };
+                output.setSpan(clickableSpan, _clickableStart, output.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
                 int colorHighLight = context.getResources().getColor(R.color.colorClickable);
                 output.setSpan(new ForegroundColorSpan(colorHighLight), _clickableStart, output.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
