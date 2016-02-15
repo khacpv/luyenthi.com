@@ -36,6 +36,7 @@ import java.util.HashMap;
 
 /**
  * Created by khacpham on 12/17/15.
+ * Calculate position of first three-dots in paragraph
  */
 public class RichTextView extends TextView {
 

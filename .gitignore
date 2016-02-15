@@ -27,3 +27,5 @@ proguard/
 *.log
 !Test/test_animate.apk
 !Test/test_fomular.apk
+
+.idea/

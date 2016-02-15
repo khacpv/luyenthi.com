@@ -54,8 +54,6 @@ public class Question03FillBlankSpace extends QuestionLayout implements Resource
 
     String html;
 
-    int currentAnswerPos=0;
-
     FlowLayout flowAnswer;
 
     public Question03FillBlankSpace(Context context) {
@@ -144,7 +142,7 @@ public class Question03FillBlankSpace extends QuestionLayout implements Resource
                 tvAnswerAnim.setY(fromCood[1]);
                 tvAnswerAnim.setText(tv.getText());
                 tvAnswerAnim.setVisibility(View.VISIBLE);
-                Log.e("TAG","cood y:"+newCood.y+ " x:"+newCood.x);
+                Log.e("TAG","cood x:"+newCood.x+ " y:"+newCood.y);
                 flowAnswer.removeView(v);
 
                 tvAnswerAnim.animate().x(newCood.x-tvAnswerAnim.getWidth()/2).y(newCood.y-tvAnswerAnim.getHeight()).setDuration(500).setInterpolator(new LinearOutSlowInInterpolator()).setListener(new Animator.AnimatorListener() {
